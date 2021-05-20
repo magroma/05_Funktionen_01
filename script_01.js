@@ -98,3 +98,16 @@ function output(outputStr) {
 }
 
 
+output(getString(prompt("Vorname?"),prompt("Nachname?")));
+function getString(firstName,lastName) {
+    let gap = " ";
+    let outputStr = "Hallo " + firstName + gap + lastName + "!";
+    return outputStr;  // Daten -----> an die Stelle des calls
+    console.log("Test"); // nach return wird die Funktion abgebrochen!
+}
+
+/** 2. Job: Ausgabe */
+// output("Hallo!"); // Unit-Test TDD (Test driven development)
+function output(outputStr) {
+    console.log(outputStr);
+}
