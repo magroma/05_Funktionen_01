@@ -45,7 +45,7 @@ function ausgabeNamenParam(firstName) {
 // ausgabeNamenParam(prompt("wie heißt Du?"));
 
 /***** Funktionen 02c *****/
-// 2c. Parametrisierung + Datenübergabe von AUSSEN
+// 2c. Parametrisierung + mehrere Parameter
 
 function ausgabeNamenParams(firstName,lastName) {  // Parameter
 
@@ -59,3 +59,26 @@ function ausgabeNamenParams(firstName,lastName) {  // Parameter
 
 // ausgabeNamenParams("Bud","Spencer");
 // ausgabeNamenParams(prompt("Vorname?"),prompt("Nachname?"));
+
+/***** Funktionen 03a *****/
+// 3a. Vorbereitung
+// Postulat: one function = one job (uncle Bob)
+// SRP single responsibility principle
+// DRY = Don't repeat yourself!
+
+function ausgabeNamenParams2(firstName,lastName) {  // Parameter
+
+    // 1. Job: string composing
+    let gap = " ";
+    let outputStr = "Hallo " + firstName + gap + lastName + "!";
+    
+    // 2. Job: output
+    console.log(outputStr); // refactoring == Umformung von Code ohne dass sich die Darstellung im Ergebnis ändert
+}
+
+ausgabeNamenParams2("Bud","Spencer");
+
+/***** Funktionen 03b *****/
+// 3b. 
+
+
