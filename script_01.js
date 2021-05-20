@@ -26,20 +26,36 @@ function ausgabeNamen() {
 //console.log(firstName); // Fehler --> weil lokale(!!!) Variable
 
 /***** Funktionen 02b *****/
-// 2a. Parametrisierung + Datenübergabe von AUSSEN
+// 2b. Parametrisierung + Datenübergabe von AUSSEN
 
 function ausgabeNamenParam(firstName) {
 
     // wenn firstName leer, dann "nobody"
-    if (firstName == undefined || firstName == "" || !firstName) {              // je nach Anforderung kann es sinnvoller sein, !firstName anstelle von firstName == undefined zu verwenden
+    if (firstName == undefined || firstName == ""/* || !firstName*/) {              // je nach Anforderung kann es sinnvoller sein, !firstName anstelle von firstName == undefined zu verwenden
         firstName = "Terence Hill"
     }
     
     console.log("Hallo " + firstName + "!"); // refactoring == Umformung von Code ohne dass sich die Darstellung im Ergebnis ändert
 }
 
-ausgabeNamenParam("Spencer"); //Call + Argument(e)
-ausgabeNamenParam("Quentin");
-ausgabeNamenParam("Butch");
-ausgabeNamenParam();
-ausgabeNamenParam(prompt("wie heißt Du?"));
+// ausgabeNamenParam("Spencer"); //Call + Argument(e)
+// ausgabeNamenParam("Quentin");
+// ausgabeNamenParam("Butch");
+// ausgabeNamenParam();
+// ausgabeNamenParam(prompt("wie heißt Du?"));
+
+/***** Funktionen 02c *****/
+// 2c. Parametrisierung + Datenübergabe von AUSSEN
+
+function ausgabeNamenParams(firstName,lastName) {  // Parameter
+
+    // wenn firstName leer, dann "nobody"
+    if (firstName == undefined || firstName == ""/* || !firstName*/) {              // je nach Anforderung kann es sinnvoller sein, !firstName anstelle von firstName == undefined zu verwenden
+        firstName = "Terence Hill"
+    }
+    
+    console.log("Hallo " + firstName + " " + lastName + "!"); // refactoring == Umformung von Code ohne dass sich die Darstellung im Ergebnis ändert
+}
+
+// ausgabeNamenParams("Bud","Spencer");
+// ausgabeNamenParams(prompt("Vorname?"),prompt("Nachname?"));
